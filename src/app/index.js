@@ -6,7 +6,7 @@ import useSelector from "../utils/use-selector";
  */
 function App() {
   const select = useSelector((state) => ({
-    name: state.modals.name,
+    // name: state.modals.name,
   }));
 
   return (
