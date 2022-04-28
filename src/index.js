@@ -12,6 +12,15 @@ const root = document.getElementById("app");
 // Состояние приложения
 const store = new Store(modules);
 
+ReactDOM.render(
+  <StoreProvider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StoreProvider>,
+  root
+);
+
 function setThemeClass() {
   document.documentElement.className = Telegram.WebApp.colorScheme;
 }
@@ -123,11 +132,3 @@ function requestAudio() {
 }
 
 // Сообщаем реакту что и куда рендерить.
-ReactDOM.render(
-  <StoreProvider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StoreProvider>,
-  root
-);

@@ -12,6 +12,7 @@ function App() {
   return (
     <>
       <h1>SIMPLE REACT-TELEGRAM WEBAPP</h1>
+      <div>SOME TEXT SOME TEXT SOME TEXT</div>
     </>
   );
 }
