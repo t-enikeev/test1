@@ -25,7 +25,7 @@ let config = {
     new HtmlWebPackPlugin({
       template: "./index.html",
       filename: "./index.html",
-      base: "/dist/",
+      // base: '/',
     }),
   ],
   //
@@ -108,18 +108,18 @@ let config = {
 
 if (process.env.NODE_ENV === "development") {
   config.devtool = "inline-source-map";
-  config.devServer = {
-    static: path.join(__dirname, "dist"),
-    port: 8010,
-    historyApiFallback: true,
-    proxy: {
-      "/api/**": {
-        target: "http://example.front.ylab.io",
-        secure: false,
-        changeOrigin: true,
-      },
-    },
-  };
+  // config.devServer = {
+  //   static: path.join(__dirname, 'dist'),
+  //   port: 8010,
+  //   historyApiFallback: true,
+  //   proxy: {
+  //     '/api/**': {
+  //       target: 'http://example.front.ylab.io',
+  //       secure: false,
+  //       changeOrigin: true,
+  //     },
+  //   },
+  // };
 }
 
 module.exports = config;
